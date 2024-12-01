@@ -33,7 +33,7 @@ spring-boot-boilerplate
 │   │   │       ├── security
 │   │   │       ├── service
 │   │   │       ├── utils
-│   │   │       └── SpringBootBoilerplateApplication.java
+│   │   │       └── AdaptBoilerplateApplication.java
 │   │   └── resources
 │   │       ├── application.yml
 │   │       └── static
@@ -67,7 +67,7 @@ mvn clean install
 Navigate to the target directory and run the application:
 
 ```sh
-java -jar target/spring-boot-boilerplate.jar
+java -jar target/adapt-boilerplate.jar
 ```
 
 ## Using Swagger

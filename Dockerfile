@@ -7,7 +7,7 @@ WORKDIR /app
 # Copy the Maven configuration file
 COPY pom.xml .
 
-# Download dependencies before copying the rest of the source code
+# Download dependencies
 RUN mvn dependency:go-offline
 
 # Copy the source code
@@ -22,7 +22,7 @@ FROM openjdk:11-jre-slim
 # Set the working directory
 WORKDIR /app
 
-# Copy the JAR file from the build stage
+# Explicitly copy the JAR file
 COPY --from=build /app/target/*.jar adapt-boilerplate.jar
 
 # Expose port 8080
